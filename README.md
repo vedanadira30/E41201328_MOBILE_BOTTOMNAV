@@ -1,7 +1,7 @@
 # E41201328_MOBILE_BOTTOMNAV
  For Mobile Workshop 5th Task, POLIJE
  <br>
- <font size = 24px> 1. Tampilan Halaman dari fragment "Home" </font>
+ <font size = 24> 1. Tampilan Halaman dari fragment "Home" </font>
  <br>
   <br>
 ![WhatsApp Image 2021-10-13 at 21 36 17 (1)](https://user-images.githubusercontent.com/80373053/137155448-19ca9d0c-274c-4cbd-b45b-04998d669e01.jpeg)
