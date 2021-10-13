@@ -13,21 +13,22 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
-
+    
+    //Mendeklarasikan Program
     MeowBottomNavigation bottomNavigation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+       //Memberikan fungsi pada buttomNavigation
         bottomNavigation = findViewById(R.id.bottom_navigation);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
-
+      //Menambahkan icon vector dari drawable
         bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.ic_home));
         bottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.ic_camera));
         bottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.ic_account));
-
+      //Memberikan fungsi interatif agar fragment dapat berpindah ketika button diberi sebuah aksi
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
@@ -50,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+        
+        //Menampilkan notifikasi ketika button menerima sebuah aksi
         bottomNavigation.setCount(3, "5");
         bottomNavigation.show(2, true);
 
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
+    //Menjalankan program
     private void loadFragment(Fragment selectedFragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
     }
